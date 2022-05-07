@@ -1,0 +1,167 @@
+
+***********************************************
+
+    CONFIGURATION: 0
+    TIME: 0.0 s.
+    MEMORY USED: 15872
+    FREE MEMORY: 12545
+    TOTAL MEMORY: 253440
+
+    MEMBRANE ID: 1, Label: 2, Charge: 0, Energy: 0
+    Multiset: #
+    Parent membrane ID: 0
+
+    SKIN MEMBRANE ID: 0, Label: 1, Charge: 0, Energy: 0
+    Multiset: a*10, h0
+    Internal membranes count: 1
+
+-----------------------------------------------
+
+    STEP: 1
+
+    Rules selected for SKIN MEMBRANE ID: 0, Label: 1, Charge: 0, Energy: 0
+    10 * #1 [a]'1 --> [b]$1
+    1 * #2 [h0]'1 --> [h1]$6
+
+***********************************************
+
+    CONFIGURATION: 1
+    TIME: 0.016 s.
+    MEMORY USED: 15872
+    FREE MEMORY: 12368
+    TOTAL MEMORY: 253440
+
+    MEMBRANE ID: 1, Label: 2, Charge: 0, Energy: 0
+    Multiset: #
+    Parent membrane ID: 0
+
+    SKIN MEMBRANE ID: 0, Label: 1, Charge: 0, Energy: 16
+    Multiset: b*10, h1
+    Internal membranes count: 1
+
+-----------------------------------------------
+
+    STEP: 2
+
+    Rules selected for MEMBRANE ID: 1, Label: 2, Charge: 0, Energy: 0
+    1 * #6 b*6[]'2$6 --> [b*6]
+
+***********************************************
+
+    CONFIGURATION: 2
+    TIME: 0.016 s.
+    MEMORY USED: 15872
+    FREE MEMORY: 12368
+    TOTAL MEMORY: 253440
+
+    MEMBRANE ID: 1, Label: 2, Charge: 0, Energy: 0
+    Multiset: b*6
+    Parent membrane ID: 0
+
+    SKIN MEMBRANE ID: 0, Label: 1, Charge: 0, Energy: 10
+    Multiset: b*4, h1
+    Internal membranes count: 1
+
+-----------------------------------------------
+
+    STEP: 3
+
+    Rules selected for MEMBRANE ID: 1, Label: 2, Charge: 0, Energy: 0
+    6 * #5 [b]'2 --> [no]$1
+
+    Rules selected for SKIN MEMBRANE ID: 0, Label: 1, Charge: 0, Energy: 10
+    1 * #3 [h1]'1 --> [h2]
+
+***********************************************
+
+    CONFIGURATION: 3
+    TIME: 0.032 s.
+    MEMORY USED: 15872
+    FREE MEMORY: 12280
+    TOTAL MEMORY: 253440
+
+    MEMBRANE ID: 1, Label: 2, Charge: 0, Energy: 6
+    Multiset: no*6
+    Parent membrane ID: 0
+
+    SKIN MEMBRANE ID: 0, Label: 1, Charge: 0, Energy: 10
+    Multiset: b*4, h2
+    Internal membranes count: 1
+
+-----------------------------------------------
+
+    STEP: 4
+
+    Rules selected for MEMBRANE ID: 1, Label: 2, Charge: 0, Energy: 6
+    4 * #7 b[no]'2$1,$1 --> [b]no
+
+***********************************************
+
+    CONFIGURATION: 4
+    TIME: 0.032 s.
+    MEMORY USED: 15872
+    FREE MEMORY: 12280
+    TOTAL MEMORY: 253440
+
+    MEMBRANE ID: 1, Label: 2, Charge: 0, Energy: 2
+    Multiset: no*2, b*4
+    Parent membrane ID: 0
+
+    SKIN MEMBRANE ID: 0, Label: 1, Charge: 0, Energy: 6
+    Multiset: h2, no*4
+    Internal membranes count: 1
+
+-----------------------------------------------
+
+    STEP: 5
+
+    Rules selected for SKIN MEMBRANE ID: 0, Label: 1, Charge: 0, Energy: 6
+    1 * #9 [no]'1$6 --> []no
+
+***********************************************
+
+    CONFIGURATION: 5
+    TIME: 0.032 s.
+    MEMORY USED: 15872
+    FREE MEMORY: 12280
+    TOTAL MEMORY: 253440
+
+    MEMBRANE ID: 1, Label: 2, Charge: 0, Energy: 2
+    Multiset: no*2, b*4
+    Parent membrane ID: 0
+
+    SKIN MEMBRANE ID: 0, Label: 1, Charge: 0, Energy: 0
+    Multiset: h2, no*3
+    Internal membranes count: 1
+
+    ENVIRONMENT: no
+
+-----------------------------------------------
+
+    STEP: 6
+
+    Rules selected for MEMBRANE ID: 1, Label: 2, Charge: 0, Energy: 2
+    4 * #5 [b]'2 --> [no]$1
+
+    Rules selected for SKIN MEMBRANE ID: 0, Label: 1, Charge: 0, Energy: 0
+    1 * #4 [h2]'1 --> [yes]
+
+***********************************************
+
+    CONFIGURATION: 6
+    TIME: 0.047 s.
+    MEMORY USED: 15872
+    FREE MEMORY: 12191
+    TOTAL MEMORY: 253440
+
+    MEMBRANE ID: 1, Label: 2, Charge: 0, Energy: 6
+    Multiset: no*6
+    Parent membrane ID: 0
+
+    SKIN MEMBRANE ID: 0, Label: 1, Charge: 0, Energy: 0
+    Multiset: no*3, yes
+    Internal membranes count: 1
+
+    ENVIRONMENT: no
+
+Halting configuration (No rule can be selected to be executed in the next step).
