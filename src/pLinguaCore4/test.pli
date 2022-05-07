@@ -1,0 +1,25 @@
+
+@model<evolution_communication>
+@priority=2;
+
+def main(){
+	@mu = [[]'2 ]'1;
+
+	
+	@ms(1) = a*3;
+	@ms(2) = c*3;
+
+	[a]'1 --> [b];
+	[c]'2 --> [d];
+
+	[b]'1 --> b[];
+	b[d]'2 --> d[b]'2;
+	[d]'2 --> [e];
+	[e]'2 --> [f];
+
+	[a]'1 --> [c];
+	
+
+}
+
+
