@@ -83,6 +83,8 @@ public abstract class Psystem implements Serializable {
 	
 	private int ecpe_priority = 0;
 
+	private int isECPe = -1;
+
 	public static final transient Collection<? extends Membrane> emptyMembranes = new HashSet<Membrane>();
 	
 	protected String getModelName() {
@@ -363,6 +365,14 @@ public abstract class Psystem implements Serializable {
 
 	public int getECPePriority(){
 		return ecpe_priority;
+	}
+
+	public int isECPe(){
+		return isECPe;
+	}
+
+	public void setIsECPe(int n){
+		this.isECPe = n;
 	}
 
 }

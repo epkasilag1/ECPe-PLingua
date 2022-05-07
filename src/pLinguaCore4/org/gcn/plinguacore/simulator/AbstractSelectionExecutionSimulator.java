@@ -501,7 +501,34 @@ public abstract class AbstractSelectionExecutionSimulator extends AbstractSimula
 
 	}
 	
-
+	protected int withEnergy(Configuration tmpCnf) {
+		Iterator<? extends Membrane> it = tmpCnf.getMembraneStructure().getAllMembranes().iterator();
+		while (it.hasNext()) {
+			ChangeableMembrane tempMembrane = (ChangeableMembrane) it.next();
+			tempMembrane.setEnergyTemp();
+		}
+		it = tmpCnf.getMembraneStructure().getAllMembranes().iterator();
+		List<IRule>aux = new ArrayList<IRule>();
+		while (it.hasNext()){
+			ChangeableMembrane temp = (ChangeableMembrane) it.next();
+			Iterator<IRule> it_rule = getPsystem().getRules().iterator(
+							temp.getLabel(),
+							temp.getLabelObj().getEnvironmentID(),
+							temp.getCharge(),true);	
+			while (it_rule.hasNext()){
+				aux.add(it_rule.next());
+			}
+		}
+		Iterator<IRule> it_rule = aux.iterator();
+		while (it_rule.hasNext()){
+			IRule r = it_rule.next();
+			System.out.println(r.toString());
+			if (r.toString().contains("$")){
+				return 1;
+			}
+		}
+		return 0;
+	}
 	
 	
 	protected void microStepSelectRules(Configuration cnf, Configuration tmpCnf)
@@ -522,6 +549,17 @@ public abstract class AbstractSelectionExecutionSimulator extends AbstractSimula
 		it = tmpCnf.getMembraneStructure().getAllMembranes().iterator();
 		it1 = cnf.getMembraneStructure().getAllMembranes().iterator();
 		if(getPsystem().getECPePriority()!=0){
+
+			if (getPsystem().isECPe() == -1){
+				if (withEnergy(tmpCnf) == 1){
+					System.out.println("ECPe");
+					getPsystem().setIsECPe(1);
+				}
+				else{
+					System.out.println("ECP");
+					getPsystem().setIsECPe(0);
+				}
+			}
 
 			boolean applied=false;
 			while (it.hasNext()) {
